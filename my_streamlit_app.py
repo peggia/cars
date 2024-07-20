@@ -5,7 +5,6 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 
-
 st.title("Cars dataset analysis")
 @st.cache_data
 def get_data():
@@ -13,7 +12,6 @@ def get_data():
     df= pd.read_csv(link)
     return df
 
-#try:
 df = get_data()
 regions = st.multiselect("Choose region", [' US.', ' Europe.', ' Japan.'], [' Europe.'])
 if not regions:
@@ -39,24 +37,3 @@ else:
     corr_matrix= data.drop(columns = 'continent').corr()
     correlation = sns.heatmap(corr_matrix, center=0, annot=True, cmap = sns.color_palette("cubehelix", as_cmap=True), )
     st.pyplot(correlation.figure)
-  
-    
-# except URLError as e:
-#     st.error(
-#         """
-#         **This demo requires internet access.**
-#         Connection error: %s
-#     """
-#         % e.reason
-#     )
-
-
-# """
-
-# st.title('Hello Wilders, welcome to my application!')
-# st.write('La totale :), hehe')
-# name = st.text_input("Please give me your name :")
-# name_length = len(name)
-# st.write("Your name has ",name_length,"characters")
-
-# """
