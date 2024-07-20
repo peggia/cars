@@ -38,7 +38,7 @@ try:
         st.pyplot(fig.figure,clear_figure = True)
     
         #-----
-        st.write("### mpg vs Cylinders")
+        st.write("### Mpg vs Cylinders")
         fig2 = sns.boxplot(data= data,y ='mpg', x= 'cylinders')
         st.pyplot(fig2.figure,clear_figure = True) 
         #-----
