@@ -38,7 +38,7 @@ try:
         st.pyplot(fig.figure,clear_figure = True)
     
         #-----
-        st.write("### Mpg vs Cylinders")
+        st.write("### mpg vs Cylinders")
         fig2 = sns.boxplot(data= data,y ='mpg', x= 'cylinders')
         st.pyplot(fig2.figure,clear_figure = True) 
         #-----
@@ -50,6 +50,7 @@ try:
         fig2 = sns.histplot(data,x='continent',color='orange')
         st.pyplot(fig2.figure,clear_figure = True) 
         #-----
+        
 except URLError as e:
     st.error(
         """
