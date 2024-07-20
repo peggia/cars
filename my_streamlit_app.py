@@ -50,7 +50,7 @@ try:
         st.write("### Mpg per year")
         fig2 = sns.barplot(data=data,y ='mpg',x='year',hue='continent')
         st.pyplot(fig2.figure,clear_figure = True) 
-        st.write("European and Japanese cars in the dataset have a better consumption, with more miles per gallon.")
+        st.write("European and Japanese cars in the dataset have a better gas mileage, with more miles per gallon.")
         st.write("While USA cars show a lower mpg accross the years")
           #-----
         st.write("### Number of cars per Continent")
