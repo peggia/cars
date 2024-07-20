@@ -46,7 +46,10 @@ try:
         fig2 = sns.histplot(data,x='year')
         st.pyplot(fig2.figure,clear_figure = True) 
           #-----
-        
+        st.write("### Number of cars per Continent")
+        fig2 = sns.histplot(data,x='continent',color='orange')
+        st.pyplot(fig2.figure,clear_figure = True) 
+        #-----
 except URLError as e:
     st.error(
         """
