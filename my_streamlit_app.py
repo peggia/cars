@@ -16,7 +16,7 @@ def get_data():
 try:
     df = get_data()
     df['year'] = df['year'].astype(int)
-    regions = st.multiselect("Choose region", [' US.', ' Europe.', ' Japan.'], [' Europe.'])
+    regions = st.multiselect("Choose region", [' US.', ' Europe.', ' Japan.'], [' US.', ' Europe.', ' Japan.'])
     if not regions:
         st.error("Please select at least one region.")
     else:
